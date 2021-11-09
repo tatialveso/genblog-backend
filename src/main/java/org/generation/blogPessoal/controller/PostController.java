@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -42,6 +43,11 @@ public class PostController {
 	@PostMapping
 	public ResponseEntity<Post> post (@RequestBody Post post) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(post));
+	}
+	
+	@PutMapping
+	public ResponseEntity<Post> put (@RequestBody Post post) {
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(post));
 	}
 	
 }
