@@ -2,9 +2,9 @@ package org.generation.blogPessoal.repository;
 
 import java.util.Optional;
 
-import org.generation.blogPessoal.model.User;
+import org.generation.blogPessoal.model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long> {
-	public Optional<User> findByLogin(String login);
+public interface UserRepository extends JpaRepository<Users, Long> {
+	public Optional<Users> findByLogin(String login);
 }

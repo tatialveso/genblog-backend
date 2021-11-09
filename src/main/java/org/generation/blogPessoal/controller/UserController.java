@@ -2,7 +2,7 @@ package org.generation.blogPessoal.controller;
 
 import java.util.Optional;
 
-import org.generation.blogPessoal.model.User;
+import org.generation.blogPessoal.model.Users;
 import org.generation.blogPessoal.model.UserLogin;
 import org.generation.blogPessoal.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +29,8 @@ public class UserController {
 	}
 	
 	@PostMapping("/register")
-	public ResponseEntity<User> Post(@RequestBody User user) {
+	public ResponseEntity<Users> Post(@RequestBody Users username) {
 		return ResponseEntity.status(HttpStatus.CREATED)
-				.body(userService.RegisterUser(user));
+				.body(userService.RegisterUser(username));
 	}
 }
