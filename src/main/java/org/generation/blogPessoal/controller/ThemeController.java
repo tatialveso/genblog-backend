@@ -42,13 +42,13 @@ public class ThemeController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Theme> post (@RequestBody Theme theme) {
+	public ResponseEntity<Theme> post(@RequestBody Theme theme) {
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(repository.save(theme));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Theme> put (@RequestBody Theme theme) {
+	public ResponseEntity<Theme> put(@RequestBody Theme theme) {
 		return ResponseEntity.ok(repository.save(theme));
 	}
 	
