@@ -26,7 +26,7 @@ public class User {
 	private String login;
 	
 	@NotNull
-	@Size(min = 5, max = 16)
+	@Size(min = 5)
 	private String password;
 
 	public long getId() {
