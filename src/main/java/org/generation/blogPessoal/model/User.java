@@ -17,16 +17,16 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull
-	@Size(min = 3, max = 100)
+	@NotNull(message = "O campo NOME precisa ser preenchido.")
+	@Size(min = 3, max = 100, message = "O NOME precisa ter no mínimo 03 letras.")
 	private String name;
 	
-	@NotNull
-	@Email
+	@NotNull(message = "O campo E-MAIL precisa ser preenchido.")
+	@Email(message = "O campo E-MAIL precisa ser preenchido com um e-mail validado.")
 	private String login;
 	
-	@NotNull
-	@Size(min = 5)
+	@NotNull(message = "O campo SENHA precisa ser preenchido.")
+	@Size(min = 5, message = "A SENHA precisa ter no mínimo 05 dígitos.")
 	private String password;
 
 	public long getId() {

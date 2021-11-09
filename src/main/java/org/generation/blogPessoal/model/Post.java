@@ -21,11 +21,11 @@ public class Post {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull
-	@Size(min = 5, max = 100)
+	@NotNull(message = "O campo TÍTULO precisa ser preenchido.")
+	@Size(min = 5, max = 100, message = "O TÍTULO precisa ter no mínimo 05 letras e no máximo 100.")
 	private String title;
 	
-	@NotNull
+	@NotNull(message = "O campo TEXTO precisa ser preenchido.")
 	private String text;
 	
 	@Temporal(TemporalType.TIMESTAMP)
