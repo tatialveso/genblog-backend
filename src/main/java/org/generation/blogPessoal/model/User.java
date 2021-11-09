@@ -23,7 +23,7 @@ public class User {
 	
 	@NotNull
 	@Email
-	private String email;
+	private String login;
 	
 	@NotNull
 	@Size(min = 5, max = 16)
@@ -45,12 +45,12 @@ public class User {
 		this.name = name;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getLogin() {
+		return login;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 	public String getPassword() {

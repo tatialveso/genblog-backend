@@ -2,7 +2,7 @@ package org.generation.blogPessoal.model;
 
 public class UserLogin {
 	private String name;
-	private String email;
+	private String login;
 	private String password;
 	private String token;
 	
@@ -14,12 +14,12 @@ public class UserLogin {
 		this.name = name;
 	}
 	
-	public String getEmail() {
-		return email;
+	public String getLogin() {
+		return login;
 	}
 	
-	public void setEmail(String email) {
-		this.email = email;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 	
 	public String getPassword() {
